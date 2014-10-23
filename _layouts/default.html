@@ -3,14 +3,33 @@
 
 	{% include head.html %}
 	<body class="textured cs-0">
-	<div class="cs-1">
-		<img class="w-fill" src="{{ "/images/logo.svg" | prepend: site.baseurl }}">
-	</div>
-	<div class="container">
-		<div class="w-30 content h-align-middle">
-			{{ content }}
+		<div class="cs-2 tiles-justify pad-h-sm">
+			<div class="tile tile-bottom">
+				<h1 class="fs-xl">GhettoBox</h1>
+			</div>
+			<ul class="tile tile-bottom">
+				<li class="tile">
+					<a href="#">Home</a>
+				</li>
+				<li class="tile">
+					<a href="#">Examples</a>
+				</li>
+				<li class="tile">
+					<a href="#">GitHub</a>
+				</li>
+			</ul>
 		</div>
-	</div>
+		<div class="cs-1">
+			<img class="w-fill" src="{{ "/images/logo.svg" | prepend: site.baseurl }}">
+		</div>
+		<div class="cs-2 pad-h-sm">
+			Something something something
+		</div>
+		<div class="container">
+			<div class="w-30 content h-align-middle">
+				{{ content }}
+			</div>
+		</div>
 
 	</body>
 </html>

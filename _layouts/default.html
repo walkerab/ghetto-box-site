@@ -4,9 +4,11 @@
 	{% include head.html %}
 
 	<body>
-
+	<div class="cs-1">
+		<img class="w-fill" src="{{ "/images/logo.svg" | prepend: site.baseurl }}">
+	</div>
 	<div class="container pad-lg">
-		<div class="margin-auto readable">
+		<div class="w-30 content">
 			{{ content }}
 		</div>
 	</div>

@@ -1,5 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
+
 html {
-	font-family: sans-serif;
+	font-family: 'Cabin Sketch',sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Walter Turncoat';
+}
+
+h1:after, h1:before,
+h2:after, h2:before,
+h3:after, h3:before,
+h4:after, h4:before,
+h5:after, h5:before,
+h6:after, h6:before {
+	content: '--';
+	display: inline-block;
+	font-family: 'Cabin Sketch',sans-serif;
 }
 
 .cs-0 {

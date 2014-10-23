@@ -42,6 +42,11 @@ h6:first-letter {
 	color: white;
 }
 
+	/* Links are also white */
+	.cs-2 a {
+		color: white;
+	}
+	
 .textured {
 	position: relative;
 }
@@ -54,4 +59,23 @@ h6:first-letter {
 		height: 100%;
 		background-image: url(../images/halftone/halftone-transparent.png);
 		pointer-events: none;
+	}
+
+.take-no-space {
+	margin-bottom: -1000px;
+}
+
+.angle-bottom-right {
+	position: relative;
+}
+
+	.angle-bottom-right:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-color: transparent rgb(247, 240, 240) transparent transparent;
+		border-width: 20px 20px 0 0;
+		border-style: solid;
 	}

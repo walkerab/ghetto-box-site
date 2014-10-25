@@ -25,25 +25,13 @@
 		<div class="cs-2 pad-h-sm">
 			Somethin somethin somethin, yo
 		</div>
-		<ul class="tile take-no-space angle-bottom-right">
-			<li class="stack pad-h-lg pad-v-sm cs-1">
-				<a href="#">Widths</a>
-			</li>
-			<li class="stack pad-h-lg pad-v-sm cs-2">
-				<a href="#">Heights</a>
-			</li>
-			<li class="stack pad-h-lg pad-v-sm cs-1">
-				<a href="#">Padding</a>
-			</li>
-			<li class="stack pad-h-lg pad-v-sm cs-2">
-				<a href="#">Tiles</a>
-			</li>
+		<ul class="js-sub-nav tile take-no-space angle-bottom-right">
 		</ul>
 		<div class="container">
 			<div class="w-30 content h-align-middle">
 				{{ content }}
 			</div>
 		</div>
-
+		<script type="text/javascript" src="{{ "/js/generate-sub-nav.js" | prepend: site.baseurl }}"></script>
 	</body>
 </html>

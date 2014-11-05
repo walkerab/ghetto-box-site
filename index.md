@@ -2,7 +2,39 @@
 layout: default
 ---
 
+## What makes GhettoBox different?
+
+Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox does not include any "components". It is designed to be used only for page layout and all it includes are simple class primitives.
+
+GhettoBox is *not* meant to be a replacement for your favorite framework. It is meant to complement your toolset while staying out of the way as much as possible.
+
+## Why should I use it?
+
+GhettoBox was created to alleviate some of the more frustrating aspects presented in other CSS framework:
+
+- Vertical Alignment can't be done using floats
+- Div Soup from nested row/col structures
+- Specificity Wars
+
+If any of the above have presented problems for you in the past, you may want to give GhettoBox a try.
+
+## Guiding Philosophy
+
+In order to use GhettoBox, it may help to understand the thought process behind it. The guiding philosophy is that most common layouts can be represented as:
+
+- Rectangles of predefined widths
+- Padding inside the rectangles
+- Content inside the padding
+- The rectangles flow left-to-right and wrap around when necessary
+- Some helpers for alignment
+
+Note that these are *not* original concepts by any means.
+
+What *is* different is that GhettoBox gives you more control through a concise, easy-to-use syntax. As well it provides responsive control for **all of the above**.
+
 ## Tiling
+
+The `.tile` is the primary component for layout. It 
 
 <div class="cs-1">
 	<ul class="tiles tiles-justify">

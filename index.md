@@ -5,7 +5,7 @@ layout: default
 ## Tiling
 
 <div class="cs-1">
-	<ul class="tiles-justify">
+	<ul class="tiles tiles-justify">
 		<li class="tile">
 			<a href="#">
 				These
@@ -38,7 +38,7 @@ layout: default
 
 ## Padding
 
-<div>
+<div class="tiles">
 	<div class="cs-1 tile w-1-2 pad-md">
 		<h3>First Column</h3>
 		<p>

@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Cabin+Sketch);
 
-html {
+html,
+.tiles > * {
 	font-family: 'Cabin Sketch',sans-serif;
 }
 

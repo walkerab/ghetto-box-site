@@ -4,7 +4,7 @@ layout: default
 
 ## What is it?
 
-GhettoBox is a set of CSS framework for creating page layouts. That's it.
+GhettoBox is a simple CSS framework for creating page layouts. That's it.
 
 ### What makes GhettoBox different?
 

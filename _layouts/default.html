@@ -23,13 +23,19 @@
 			<img class="w-fill" src="{{ "/images/logo.svg" | prepend: site.baseurl }}">
 		</div>
 		<div class="cs-2 pad-h-sm">
+			<span class="btn"></span>
 			Somethin somethin somethin, yo
 		</div>
-		<ul class="js-sub-nav tile w-8 take-no-space angle-bottom-right">
-		</ul>
-		<div class="container">
-			<div class="w-30 content h-align-middle">
-				{{ content }}
+		<div class="tiles">
+			<div class="md-tile md-w-1-5 tiles">
+				<ul class="js-sub-nav angle-bottom-right md-tile tiles">
+					&nbsp;
+				</ul>
+			</div>
+			<div class="md-tile md-w-4-5 tiles tiles-middle pad-sm">
+				<div class="tile readable content">
+					{{ content }}
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="{{ "/js/generate-sub-nav.js" | prepend: site.baseurl }}"></script>

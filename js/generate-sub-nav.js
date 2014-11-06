@@ -5,7 +5,7 @@ for (var i = 0; i < len; i++) {
 	var elheading = elheadings[i];
 	elheading.id = elheading.textContent.toLowerCase().replace(' ','-');
 	elsub_navs_content.push(
-		'<li class="stack pad-h-lg pad-v-sm cs-',
+		'<li class="tile md-stack pad-h-md lg-pad-h-lg pad-v-sm cs-',
 			(i%2)+1, // alternate 1 and 2
 			'"><a href="#',elheading.id,'">',
 			elheading.textContent,

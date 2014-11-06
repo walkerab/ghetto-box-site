@@ -60,8 +60,8 @@ h6:first-letter {
 		pointer-events: none;
 	}
 
-.take-no-space {
-	margin-bottom: -1000px;
+.readable {
+	max-width: 34em;
 }
 
 .angle-bottom-right {

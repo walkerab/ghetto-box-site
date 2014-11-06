@@ -2,13 +2,17 @@
 layout: default
 ---
 
-## What makes GhettoBox different?
+## What is it?
+
+GhettoBox is a set of CSS framework for creating page layouts. That's it.
+
+### What makes GhettoBox different?
 
 Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox does not include any "components". It is designed to be used only for page layout and all it includes are simple class primitives.
 
 GhettoBox is *not* meant to be a replacement for your favorite framework. It is meant to complement your toolset while staying out of the way as much as possible.
 
-## Why should I use it?
+### Why should I use it?
 
 GhettoBox was created to alleviate some of the more frustrating aspects presented in other CSS framework:
 
@@ -18,7 +22,7 @@ GhettoBox was created to alleviate some of the more frustrating aspects presente
 
 If any of the above have presented problems for you in the past, you may want to give GhettoBox a try.
 
-## Guiding Philosophy
+### Guiding Philosophy
 
 In order to use GhettoBox, it may help to understand the thought process behind it. The guiding philosophy is that most common layouts can be represented as:
 

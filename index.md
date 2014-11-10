@@ -4,13 +4,54 @@ layout: default
 
 ## What is it?
 
-GhettoBox is a simple CSS framework for creating page layouts. That's it.
+GhettoBox is a set of dead-simple CSS components for doing page layout.
+
+At the most basic level, it is a CSS grid system. However, once you familiarize yourself with it, you will see it provides significantly more than that.
+
+<!--
+It encourages creating designs rapidly at the template level AKA doing [Mockups in Markup](#).
+-->
+
+Note that GhettoBox is *not* meant to be a replacement for your favorite framework. It should be able to complement your toolset while staying out of the way as much as possible.
+
+### Philosophy
+
+The guiding principle is that most common layouts can be broken down into:
+
+- Rectangles of predefined widths
+- Padding inside the rectangles
+- Content inside the padding (This controls the height of the rectangles)
+- The rectangles flow left-to-right and wrap around when necessary
+- Some helpers for alignment
+
+Note that these are *not* original concepts by any means. The majority of CSS grid systems already fall under this description.
+
+What *is* different is that GhettoBox gives you more control over the process.
+
+- Vertical Alignment
+- Widths, Padding, Font-Size, Alignment - Can be controlled per element and per screen size
+
+<!--
+### Give it Five Minutes
+
+For many of you, this may sound like crazy talk, but I urge you to take five minutes and let it absorb. You have little to lose by trying it.
+
+
+	https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set/
+	https://github.com/nemophrost/atomic-css
+	http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
+	https://www.npmjs.org/package/atom-css
+	? http://forum.upcase.com/t/thoughts-on-single-use-atomic-css-classes/2873/4
+-->
 
 ### What makes GhettoBox different?
 
-Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox does not include any "components". It is designed to be used only for page layout and all it includes are simple class primitives.
+Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides only low-level components. It is designed to be used only for page layout and all it includes are simple, small, reusable units.
 
-GhettoBox is *not* meant to be a replacement for your favorite framework. It is meant to complement your toolset while staying out of the way as much as possible.
+If you have worked with a CSS preprocessor before, you may find these components comparable to mix-ins - the difference being that you apply the mix-ins to HTML elements as opposed to CSS rules.
+
+
+<!--
 
 ### Why should I use it?
 
@@ -22,19 +63,7 @@ GhettoBox was created to alleviate some of the more frustrating aspects presente
 
 If any of the above have presented problems for you in the past, you may want to give GhettoBox a try.
 
-### Guiding Philosophy
-
-In order to use GhettoBox, it may help to understand the thought process behind it. The guiding philosophy is that most common layouts can be represented as:
-
-- Rectangles of predefined widths
-- Padding inside the rectangles
-- Content inside the padding
-- The rectangles flow left-to-right and wrap around when necessary
-- Some helpers for alignment
-
-Note that these are *not* original concepts by any means.
-
-What *is* different is that GhettoBox gives you more control through a concise, easy-to-use syntax. As well it provides responsive control for **all of the above**.
+-->
 
 ## Tiling
 

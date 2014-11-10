@@ -12,7 +12,11 @@ At the most basic level, it is a CSS grid system. However, once you familiarize 
 It encourages creating designs rapidly at the template level AKA doing [Mockups in Markup](#).
 -->
 
-Note that GhettoBox is *not* meant to be a replacement for your favorite framework. It should be able to complement your toolset while staying out of the way as much as possible.
+<div class="cs-2 pad-sm" markdown="1">
+
+ *Note:* GhettoBox is *not* meant to be a replacement for your favorite framework. It should be able to complement your toolset while staying out of the way as much as possible.
+
+</div>
 
 ### Philosophy
 

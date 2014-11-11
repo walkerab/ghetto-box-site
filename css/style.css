@@ -78,3 +78,7 @@ h6:first-letter {
 		border-width: 20px 20px 0 0;
 		border-style: solid;
 	}
+
+.rnd-xs {
+	border-radius: 2px;
+}

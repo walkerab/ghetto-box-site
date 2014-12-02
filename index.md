@@ -14,7 +14,7 @@ It encourages creating designs rapidly at the template level AKA doing [Mockups 
 
 <div class="cs-2 pad-sm rnd-xs" markdown="1">
 
- *Note:* GhettoBox is *not* meant to be a replacement for your favorite framework. It should be able to complement your toolset while staying out of the way as much as possible.
+*Note:* GhettoBox is *not* meant to be a replacement for your favorite framework. It should be able to complement your toolset while staying out of the way as much as possible.
 
 </div>
 
@@ -94,6 +94,8 @@ The `.tile` is the primary component for layout. It
 </div>
 
 ## Widths
+
+These will look familiar to those of you who use ... The difference here is that GhettoBox does not add gutters to your columns.
 
 ### Fraction Based
 

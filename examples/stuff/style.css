@@ -2,3 +2,13 @@ html,
 .tiles > * {
 	font-family: sans-serif;
 }
+
+.cs-0 {
+	background-color: white;
+	color: #222;
+}
+
+.cs-1 {
+	background-color: #222;
+	color: white;
+}

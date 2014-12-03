@@ -6,7 +6,9 @@ layout: default
 
 GhettoBox is a set of dead-simple CSS components for doing page layout.
 
-At the most basic level, it is a CSS grid system. However, once you familiarize yourself with it, you will see it provides significantly more than that.
+At a basic level, it is somewhat like a CSS grid system. However, once you familiarize yourself with it, you will see it provides significantly more than that.
+
+It is designed to be used in your templates for rapidly creating page layouts.
 
 <!--
 It encourages creating designs rapidly at the template level AKA doing [Mockups in Markup](#).
@@ -18,22 +20,39 @@ It encourages creating designs rapidly at the template level AKA doing [Mockups 
 
 </div>
 
+### How Does it Work?
+
+You add the classes to your markup.
+
+### Give it Five Minutes
+
+GhettoBox is quite different from other CSS libraries and its use of presentational classes may be offensive to some. It's very nature seems to go against so-called CSS best practices, but as I am sure you have heard before, it is time to start questioning best practices.
+
+As bizarre as this library may look, there is a great deal of thought and research behind it and the decisions made.
+
+- Avoid Bloat
+- Avoid Specificity
+- Keep it Simple!
+
 ### Philosophy
 
-The guiding principle is that most common layouts can be broken down into:
+The guiding principle is that most page layouts can be broken down into:
 
-- Rectangles of predefined widths
+- Rectangles that flow left-to-right and wrap around
 - Padding inside the rectangles
 - Content inside the padding (This controls the height of the rectangles)
-- The rectangles flow left-to-right and wrap around when necessary
 - Some helpers for alignment
 
-Note that these are *not* original concepts by any means. The majority of CSS grid systems already fall under this description.
+Note that these are *not* original concepts by any means. The majority of CSS grid systems already follow similar concepts.
 
-What *is* different is that GhettoBox gives you more control over the process.
+What *is* different is that GhettoBox gives you more control in the process. It allows you to easily adjust:
 
-- Vertical Alignment
-- Widths, Padding, Font-Size, Alignment - Can be controlled per element and per screen size
+- Horizontal & Vertical Alignment
+- Padding
+- Font-Size
+- Width
+
+And to be able to adjust them responsively depending on the screen size.
 
 <!--
 ### Give it Five Minutes

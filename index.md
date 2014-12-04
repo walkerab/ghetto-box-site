@@ -20,13 +20,31 @@ It encourages creating designs rapidly at the template level AKA doing [Mockups 
 
 </div>
 
-### How Does it Work?
+<!-- ### How Does it Work?
 
-You add the classes to your markup.
+It's not rocket surgery. You add the classes to your markup.
+
+e.g. Imagine you had some HTML
+
+	<p>
+		This is a paragraph.
+	</p>
+
+If you wanted the paragraph to be half the width of its container you would add the `w-1-2` class.
+
+	<p class="w-1-2">
+		This is a paragraph.
+	</p>
+
+If you then wanted it to ... -->
 
 ### Give it Five Minutes
 
-GhettoBox is quite different from other CSS libraries and its use of presentational classes may be offensive to some. It's very nature seems to go against so-called CSS best practices, but as I am sure you have heard before, it is time to start questioning best practices.
+GhettoBox is very different from other CSS libraries. Not only that, it is not going to fit into everyone's workflow.
+
+I fully expect some people to hate on it. Haters gonna hate.
+
+Its use of presentational classes will be offensive to some. Its very nature seems to go against so-called CSS best practices, but as I am sure you have heard before, it is time to start questioning best practices.
 
 As bizarre as this library may look, there is a great deal of thought and research behind it and the decisions made.
 
@@ -73,6 +91,7 @@ Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides 
 
 If you have worked with a CSS preprocessor before, you may find these components comparable to mix-ins - the difference being that you apply the mix-ins to HTML elements as opposed to CSS rules.
 
+Have you ever tried to understand someone else's CSS code? What GhettoBox lacks in ... it makes up for in simplicity.
 
 <!--
 

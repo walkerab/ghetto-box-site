@@ -9,13 +9,16 @@
 			</div>
 			<ul class="tile tile-bottom">
 				<li class="tile">
-					<a href="#">Home</a>
+					<a href="{{ "/" | prepend: site.baseurl }}">Home</a>
 				</li>
 				<li class="tile">
-					<a href="#">Examples</a>
+					<a href="{{ "/documentation/" | prepend: site.baseurl }}">Documentation</a>
 				</li>
 				<li class="tile">
-					<a href="#">GitHub</a>
+					<a href="{{ "/examples/" | prepend: site.baseurl }}">Examples</a>
+				</li>
+				<li class="tile">
+					<a href="{{ "/" | prepend: site.baseurl }}">GitHub</a>
 				</li>
 			</ul>
 		</div>

@@ -21,7 +21,7 @@ It encourages creating designs rapidly at the template level AKA doing [Mockups 
 
 </div>
 
-<!-- ### How Does it Work?
+<!-- ## How Does it Work?
 
 It's not rocket surgery. You add the classes to your markup.
 
@@ -39,7 +39,7 @@ If you wanted the paragraph to be half the width of its container you would add 
 
 If you then wanted it to ... -->
 
-### Give it Five Minutes
+## Give it Five Minutes
 
 GhettoBox is very different from other CSS libraries. Not only that, it is not going to fit into everyone's workflow.
 
@@ -53,7 +53,7 @@ As bizarre as this library may look, there is a great deal of thought and resear
 - Avoid Specificity
 - Keep it Simple!
 
-### Philosophy
+## Philosophy
 
 The guiding principle is that most page layouts can be broken down into:
 
@@ -74,7 +74,7 @@ What *is* different is that GhettoBox gives you more control in the process. It 
 And to be able to adjust them responsively depending on the screen size.
 
 <!--
-### Give it Five Minutes
+## Give it Five Minutes
 
 For many of you, this may sound like crazy talk, but I urge you to take five minutes and let it absorb. You have little to lose by trying it.
 
@@ -86,7 +86,7 @@ For many of you, this may sound like crazy talk, but I urge you to take five min
 	? http://forum.upcase.com/t/thoughts-on-single-use-atomic-css-classes/2873/4
 -->
 
-### What makes GhettoBox different?
+## What makes GhettoBox different?
 
 Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides only low-level components. It is designed to be used only for page layout and all it includes are simple, small, reusable units.
 
@@ -96,7 +96,7 @@ Have you ever tried to understand someone else's CSS code? What GhettoBox lacks 
 
 <!--
 
-### Why should I use it?
+## Why should I use it?
 
 GhettoBox was created to alleviate some of the more frustrating aspects presented in other CSS framework:
 

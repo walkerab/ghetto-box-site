@@ -39,30 +39,55 @@ If you wanted the paragraph to be half the width of its container you would add 
 
 If you then wanted it to ... -->
 
-## Give it Five Minutes
+## You Crazy
 
-GhettoBox is very different from other CSS libraries. Not only that, it is not going to fit into everyone's workflow.
+GhettoBox is very different from other CSS libraries. It isn't going to fit with everyone's preconception of what qualifies as "proper CSS".
 
 I fully expect some people to hate on it. Haters gonna hate.
 
-Its use of presentational classes will be offensive to some. Its very nature seems to go against so-called CSS best practices, but as I am sure you have heard before, it is time to start questioning best practices.
+Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be applied to HTML.
+
+Its use of presentational classes will be offensive to some. Its very nature seems to go against so-called CSS best practices, but as I am sure you have heard before, it is time to start [questioning best practices](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/#how-i-learned-to-stop-worrying-).
 
 As bizarre as this library may look, there is a great deal of thought and research behind it and the decisions made.
 
 - Avoid Bloat
 - Avoid Specificity
-- Keep it Simple!
+- Keep it Simple - use as few concepts as possible
+
 
 ## Philosophy
 
-The guiding principle is that most page layouts can be broken down into:
+The majority of page layout can be broken down into:
+
+- Content
+- Rectangles of controlled width around the content that flow left-to-right and wrap around
+- Space inside the rectangles to create space between content or to move content away from the edges
 
 - Rectangles that flow left-to-right and wrap around
 - Padding inside the rectangles
-- Content inside the padding (This controls the height of the rectangles)
+- Content inside the padding (This also controls the height of the rectangles)
 - Some helpers for alignment
 
 Note that these are *not* original concepts by any means. The majority of CSS grid systems already follow similar concepts.
+
+<div class="cs-1 pad-sm rnd-xs" markdown="1">
+
+You may notice that margins are not listed as one of the major components for layout. GhettoBox takes the stance of setting `box-sizing: border-box` and always preferring padding over margins (when possible).
+
+This approach comes with some added benefits:
+
+1. A semi-unified way for handling negative space.
+2. Simplified math - if you say something takes up X amount of space then it will simply occupy X amount of space. No `calc()` necessary.
+
+<!-- http://csswizardry.com/2011/08/building-better-grid-systems/ -->
+
+No gutters!
+
+<!-- http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works -->
+<!-- http://dbushell.com/2013/03/19/on-responsive-layout-and-grids/ -->
+
+</div>
 
 What *is* different is that GhettoBox gives you more control in the process. It allows you to easily adjust:
 
@@ -73,19 +98,6 @@ What *is* different is that GhettoBox gives you more control in the process. It 
 
 And to be able to adjust them responsively depending on the screen size.
 
-<!--
-## Give it Five Minutes
-
-For many of you, this may sound like crazy talk, but I urge you to take five minutes and let it absorb. You have little to lose by trying it.
-
-
-	https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set/
-	https://github.com/nemophrost/atomic-css
-	http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
-	https://www.npmjs.org/package/atom-css
-	? http://forum.upcase.com/t/thoughts-on-single-use-atomic-css-classes/2873/4
--->
-
 ## What makes GhettoBox different?
 
 Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides only low-level components. It is designed to be used only for page layout and all it includes are simple, small, reusable units.
@@ -93,6 +105,13 @@ Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides 
 If you have worked with a CSS preprocessor before, you may find these components comparable to mix-ins - the difference being that you apply the mix-ins to HTML elements as opposed to CSS rules.
 
 Have you ever tried to understand someone else's CSS code? What GhettoBox lacks in ... it makes up for in simplicity.
+
+- Gutters are opt-in instead of opt-out
+- Inline block
+	- Instead of floats to allow vertical / horizontal alignment
+	- Instead of flex-box for consistent behaviour between browsers
+- A defined class naming scheme: `.[condition-]component[-variant][-argument...]`
+- Use as few concepts as possible
 
 <!--
 

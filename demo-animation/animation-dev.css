@@ -1,4 +1,14 @@
 .animation-frame {
 	outline: 1px solid green;
 	margin: 50px 0;
+	position: relative;
+}
+
+.animation-frame:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	content: attr(data-title);
+	transform: translate(0,-100%);
 }

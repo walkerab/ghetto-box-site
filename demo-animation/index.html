@@ -3,8 +3,35 @@
 <head>
 	<title>Demo Animation</title>
 	<link rel="stylesheet" type="text/css" href="../dist/ghetto-box.css">
+	<style type="text/css">
+		#source {
+			font-family: monospace;
+			tab-size: 2;
+			line-height: 1.1em;
+		}
+
+		@-webkit-keyframes insert {
+			0% {
+				transform: scaleX(4) scaleY(4);
+			}
+			100% {
+				transform: scaleX(1) scaleY(1);
+			}
+		}
+
+		ins {
+			-webkit-animation-name: insert;
+			-webkit-animation-duration: 1s;
+			display: inline-block;
+			background-color: yellow;
+			color: purple;
+			font-weight: bold;
+		}
+	</style>
 </head>
-<body>
+<body class="tiles">
+	<pre id="source" class="tile w-1-2"></pre>
+	<div id="result" class="tile w-1-2"></div>
 	<script type="text/javascript" src="demo-animation.js"></script>
 </body>
 </html>

@@ -5,19 +5,15 @@ layout: default
 
 ## What is it?
 
-GhettoBox is a set of dead-simple CSS components for doing page layout.
+GhettoBox is a set of CSS micro-components for doing page layout.
 
-At a basic level, it is somewhat like a CSS grid system. However, once you familiarize yourself with it, you will see it provides significantly more than that.
+At a basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it provides a lot more than that.
 
-It is designed to be used in your templates for rapidly creating page layouts.
-
-<!--
-It encourages creating designs rapidly at the template level AKA doing [Mockups in Markup](#).
--->
+GhettoBox fits best at the template layer. It's designed for rapidly creating page layouts and encourages creating [Mockups in Markup](#). It can however be used with CSS preprocessors such as Stylus and LESS.
 
 <div class="cs-2 pad-sm rnd-xs" markdown="1">
 
-*Note:* GhettoBox is *not* meant to be a replacement for your favorite framework. It should be able to complement your toolset while staying out of the way as much as possible.
+*Note:* GhettoBox is not meant to be a replacement for your favorite framework. It is meant to complement your toolset while staying out of the way as much as possible.
 
 </div>
 
@@ -41,11 +37,11 @@ If you then wanted it to ... -->
 
 ## You Crazy
 
-GhettoBox is very different from other CSS libraries. It isn't going to fit with everyone's preconception of what qualifies as "proper CSS".
+GhettoBox is very different from other CSS libraries. It isn't going to meld with every preconception of what qualifies as "proper CSS".
 
 I fully expect some people to hate on it. Haters gonna hate.
 
-Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be applied to HTML.
+Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be successfully applied to HTML.
 
 Its use of presentational classes will be offensive to some. Its very nature seems to go against so-called CSS best practices, but as I am sure you have heard before, it is time to start [questioning best practices](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/#how-i-learned-to-stop-worrying-).
 

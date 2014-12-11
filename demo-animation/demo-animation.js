@@ -16,11 +16,6 @@
 		return new Promise(resolver);
 	};
 
-	var changeFrame = function(next_frame) {
-		// var current_frame, next_frame;
-		// transitionFrames(current_frame, next_frame);
-	};
-
 	var highlightString = function(str) {
 		return '<ins>'+str+'</ins>';
 	};

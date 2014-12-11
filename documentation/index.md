@@ -9,11 +9,14 @@ layout: default
 
 Almost all classes in GhettoBox can be selectively applied depending on the screen size.
 
-<div class="cs-1 pad-sm rnd-xs" markdown="1">
+In `variables.styl`:
 
-
-
-</div>
+	screen-sizes = {
+		sm: 768px,
+		md: 992px,
+		lg: 1200px,
+		xl: 1400px
+	}
 
 We can control when the class is applied by prefixing the name of the screen size onto the class name.
 
@@ -30,7 +33,7 @@ For example, imagine we have two columns.
 </div>
 ```
 
-Let's say we only wanted them to act as columns (tiles) when the screen is of at least a medium size.
+Let's say we only wanted them to act as columns (tiles) when the screen is of at least a medium size (`992px`).
 
 ```html
 <div class="tiles">
@@ -55,9 +58,33 @@ You can override a component provided
 
 ## Tiling
 
-So you want your elements to be placed left-to-right instead of stacking? This is the place to start.
+Probably the greatest feature of GhettoBox is the tiling system.
 
-The `.tile` is the primary component for layout. It 
+In the context of GhettoBox, an element that flows left-to-right and wraps around is referred to as a tile.
+
+```html
+<ul>
+	<li>
+		<a class="tile" href="#">
+			These
+		</a>
+	</li>
+	<li>
+		<a class="tile" href="#">
+			Are
+		</a>
+	</li>
+	<li>
+		<a class="tile" href="#">
+			Links
+		</a>
+	</li>
+</ul>
+```
+
+We made these list items inline by adding the `.tile` class.
+
+A tile should be placed inside of a `.tiles` container element. This is to control the space (or lack thereof) between each `.tile`.
 
 <div class="cs-1">
 	<ul class="tiles tiles-justify">
@@ -92,6 +119,10 @@ These will look familiar to those of you who use ... The difference here is that
 </div>
 
 ### Line-Height Based
+
+## Horizontal Alignment
+
+## Vertical Alignment
 
 ## Padding
 

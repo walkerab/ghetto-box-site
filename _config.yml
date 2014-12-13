@@ -9,4 +9,11 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+kramdown:
+  use_coderay: true
+  coderay:
+    coderay_tab_width: 4
+    coderay_css: style
+    coderay_line_numbers: nil
+
 permalink: pretty

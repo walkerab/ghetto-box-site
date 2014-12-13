@@ -22,7 +22,7 @@ We can control when the class is applied by prefixing the name of the screen siz
 
 For example, imagine we have two columns.
 
-```html
+~~~html
 <div class="tiles">
 	<div class="tile w-1-2 pad-md">
 		1
@@ -31,11 +31,11 @@ For example, imagine we have two columns.
 		2
 	</div>
 </div>
-```
+~~~
 
 Let's say we only wanted them to act as columns (tiles) when the screen is of at least a medium size (`992px`).
 
-```html
+~~~html
 <div class="tiles">
 	<div class="md-tile md-w-1-2 pad-md">
 		1
@@ -44,7 +44,7 @@ Let's say we only wanted them to act as columns (tiles) when the screen is of at
 		2
 	</div>
 </div>
-```
+~~~
 
 Note that these selective class-names are applied in a mobile-first fashion. This means that a class will apply to the specified screen size *as well as* all larger screen-sizes.
 
@@ -62,7 +62,7 @@ Probably the greatest feature of GhettoBox is the tiling system.
 
 In the context of GhettoBox, an element that flows left-to-right and wraps around is referred to as a tile.
 
-```html
+~~~html
 <ul>
 	<li>
 		<a class="tile" href="#">
@@ -80,7 +80,7 @@ In the context of GhettoBox, an element that flows left-to-right and wraps aroun
 		</a>
 	</li>
 </ul>
-```
+~~~
 
 We made these list items inline by adding the `.tile` class.
 

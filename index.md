@@ -9,7 +9,9 @@ GhettoBox is a set of CSS micro-components for doing page layout.
 
 At a basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it provides a lot more than that.
 
-GhettoBox is made to fit best at the template layer. It's designed for rapidly creating page layouts and encourages creating [Mockups in Markup](#). It can however be used in a variety of other ways and with CSS preprocessors such as Stylus and LESS.
+<!-- <iframe style="height: 800px;" class="w-fill" src="demo-animation/" frameborder="0"></iframe> -->
+
+GhettoBox is made to fit into your template layer. It's designed for rapidly creating page layouts and encourages creating [Mockups in Markup](#). It can however be used in a variety of other ways and with CSS preprocessors such as [Stylus](#) or [LESS](#).
 
 <div class="cs-2 pad-sm rnd-xs" markdown="1">
 
@@ -17,33 +19,15 @@ GhettoBox is made to fit best at the template layer. It's designed for rapidly c
 
 </div>
 
-<!-- ## How Does it Work?
-
-It's not rocket surgery. You add the classes to your markup.
-
-e.g. Imagine you had some HTML
-
-	<p>
-		This is a paragraph.
-	</p>
-
-If you wanted the paragraph to be half the width of its container you would add the `w-1-2` class.
-
-	<p class="w-1-2">
-		This is a paragraph.
-	</p>
-
-If you then wanted it to ... -->
-
 ## You Crazy
 
-GhettoBox is very different from other CSS libraries. It isn't going to meld with every preconception of what qualifies as "proper CSS".
+GhettoBox is very different from other CSS libraries. It isn't going to meld with everyone's idea of what qualifies as "proper CSS".
 
 I fully expect some people to hate on it. Haters gonna hate.
 
 Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be successfully applied to HTML.
 
-## Assumptions
+## Motivation
 
 The majority of page layout can be created using a strict subset of the box-model:
 
@@ -78,6 +62,8 @@ Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides 
 
 If you have worked with a CSS preprocessor before, you may find these micro-components comparable to mix-ins - the difference being that you apply the mix-ins driectly to HTML elements as opposed to CSS rules which are then applied to HTML elements. There is one less level of indirection.
 
+<!--
+
 ### Comparison to "Semantic" grid systems
 
 Benefits of this approach:
@@ -97,3 +83,9 @@ Disadvantages:
 
 - Can lead to verbosity in the markup
 - CSS files can be bulky
+
+-->
+
+## Browsers
+
+GhettoBox is tested and works in ...

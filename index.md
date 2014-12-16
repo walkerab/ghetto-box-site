@@ -56,7 +56,7 @@ What *is* different is that GhettoBox gives you more control in the process. It 
 
 And to be able to adjust them responsively depending on the screen size.
 
-## What makes GhettoBox different?
+## What's different?
 
 Unlike other CSS frameworks such as Bootstrap or Foundation, GhettoBox provides only low-level components. It is designed to be used only for page layout and all it includes are simple, small, reusable units.
 
@@ -86,6 +86,6 @@ Disadvantages:
 
 -->
 
-## Browsers
+## Browser Support
 
 GhettoBox is tested and works in ...

@@ -4,7 +4,7 @@
 	var elsub_navs_content = [];
 	for (var i = 0; i < len; i++) {
 		var elheading = elheadings[i];
-		elheading.id = elheading.textContent.toLowerCase().replace(' ','-');
+		elheading.id = elheading.textContent.toLowerCase().replace(/\W/g,'-');
 		elsub_navs_content.push(
 			'<li class="tile md-stack cs-',
 				(i%2)+1, // alternate 1 and 2

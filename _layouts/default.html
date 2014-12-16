@@ -3,30 +3,31 @@
 
 	{% include head.html %}
 	<body class="textured cs-0">
-		<div class="cs-2 tiles tiles-justify pad-h-sm">
-			<div class="tile tile-bottom">
-				<h1 class="fs-xl">GhettoBox</h1>
+		<div class="cs-2 tiles tiles-justify">
+			<div class="tile tile-bottom pad-h-sm">
+				<h1 class="fs-xl">
+					<a href="{{ "/" | prepend: site.baseurl }}">GhettoBox</a>
+				</h1>
 			</div>
-			<ul class="tile tile-bottom">
-				<li class="tile">
+			<ul class="tile tile-bottom tiles">
+				<li class="tile pad-h-sm">
 					<a href="{{ "/" | prepend: site.baseurl }}">Home</a>
 				</li>
-				<li class="tile">
+				<li class="tile pad-h-sm">
 					<a href="{{ "/documentation/" | prepend: site.baseurl }}">Documentation</a>
 				</li>
-				<li class="tile">
+				<li class="tile pad-h-sm">
 					<a href="{{ "/examples/" | prepend: site.baseurl }}">Examples</a>
 				</li>
-				<li class="tile">
+				<li class="tile pad-h-sm">
 					<a href="{{ "/" | prepend: site.baseurl }}">GitHub</a>
 				</li>
 			</ul>
 		</div>
 		<div class="cs-1">
-			<img class="w-fill" src="{{ "/images/logo.svg" | prepend: site.baseurl }}">
+			<img class="w-fill" style="max-" src="{{ "/images/logo.svg" | prepend: site.baseurl }}">
 		</div>
-		<div class="cs-2 pad-h-sm">
-			<span class="btn"></span>
+		<div class="cs-2 pad-h-sm pad-v-xs">
 			Somethin somethin somethin, yo
 		</div>
 		<div class="tiles">

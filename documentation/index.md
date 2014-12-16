@@ -11,12 +11,14 @@ Almost all classes in GhettoBox can be selectively applied depending on the scre
 
 In `variables.styl`:
 
+~~~javascript
 	screen-sizes = {
 		sm: 768px,
 		md: 992px,
 		lg: 1200px,
 		xl: 1400px
 	}
+~~~
 
 We can control when the class is applied by prefixing the name of the screen size onto the class name.
 
@@ -58,12 +60,26 @@ You can override a component provided
 
 ## Tiling
 
-Probably the greatest feature of GhettoBox is the tiling system.
+The core feature of GhettoBox is the tiling system. It is what controls left-to-right layout.
+
+<div class="cs-2 pad-sm" markdown="1">
 
 In the context of GhettoBox, an element that flows left-to-right and wraps around is referred to as a tile.
+	
+</div>
+
+Tiling requires the use of at least two CSS classes:
+
+`.tile`
+: Identifies each tile element
+
+`.tiles`
+: The container for the tile elements
+
+### Example
 
 ~~~html
-<ul>
+<ul class="tiles">
 	<li>
 		<a class="tile" href="#">
 			These
@@ -82,12 +98,8 @@ In the context of GhettoBox, an element that flows left-to-right and wraps aroun
 </ul>
 ~~~
 
-We made these list items inline by adding the `.tile` class.
-
-A tile should be placed inside of a `.tiles` container element. This is to control the space (or lack thereof) between each `.tile`.
-
 <div class="cs-1">
-	<ul class="tiles tiles-justify">
+	<ul class="tiles pad-sm">
 		<li class="tile">
 			<a href="#">
 				These
@@ -106,23 +118,181 @@ A tile should be placed inside of a `.tiles` container element. This is to contr
 	</ul>
 </div>
 
+We made these list items inline by adding the `.tile` class. The surrounding `.tile` class will control the space between each `.tile` (or lack thereof).
+
+As is, this is not very useful. We need to have some space between our links!
+
+Let's throw in some padding.
+
+~~~html
+<ul class="tiles">
+	<li>
+		<a class="tile pad-xs" href="#">
+			These
+		</a>
+	</li>
+	<li>
+		<a class="tile pad-xs" href="#">
+			Are
+		</a>
+	</li>
+	<li>
+		<a class="tile pad-xs" href="#">
+			Links
+		</a>
+	</li>
+</ul>
+~~~
+
+<div class="cs-1">
+	<ul class="tiles pad-xs">
+		<li class="tile pad-xs">
+			<a href="#">
+				These
+			</a>
+		</li>
+		<li class="tile pad-xs">
+			<a href="#">
+				Are
+			</a>
+		</li>
+		<li class="tile pad-xs">
+			<a href="#">
+				Links
+			</a>
+		</li>
+	</ul>
+</div>
+
 ## Widths
 
-These will look familiar to those of you who use ... The difference here is that GhettoBox does not add gutters to your columns.
+We can control the width of an element using one of the width classes. They look like this: `.w-{numerator}-{denominator}`.
 
-### Fraction Based
+~~~html
+<div class="w-1-3">
+	The width is a third of the width of the containing space.
+</div>
+~~~
 
-<div>
-	<div class="w-1-3 cs-2">
-		I am a third of the width
+<div class="w-1-3 cs-1">
+	The width is a third of the width of the containing space.
+</div>
+
+By default there are ... These can be customized in `variables.styl`.
+
+<div class="cs-2 pad-sm" markdown="1">
+
+**NOTE:** In addition to the `.w-*-*` classes there is also a special class, `.w-fill`. It makes an element 100% the width of its parent element.
+
+</div>
+
+Using widths we can, like in a grid system, create columns. To do this we make an element act as a tile and then give it a width.
+
+~~~html
+<div class="tiles">
+	<div class="tile w-1-2">
+		First Column
+	</div>
+	<div class="tile w-1-2">
+		Second Column
+	</div>
+</div>
+~~~
+
+<div class="tiles">
+	<div class="tile w-1-2 cs-2">
+		First Column
+	</div>
+	<div class="tile w-1-2 cs-1">
+		Second Column
 	</div>
 </div>
 
-### Line-Height Based
+Unlike other grid systems, these "columns" do not include gutters by default. If we want to have gutters, it's only a matter of adding padding to the elements.
 
-## Horizontal Alignment
+<div class="tiles">
+	<div class="tile w-1-3 pad-sm cs-2"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-1"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-2"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-1"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-2"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+	<div class="tile w-1-3 pad-sm cs-1"><pre><code>.tile
+.w-1-3
+.pad-sm</code></pre></div>
+</div>
 
-## Vertical Alignment
+## Alignment
+
+Tiles can be aligned both vertically and/or horizontally.
+
+For vertical alignment we add one of these `.tile-*` variants to our tile elements:
+
+`.tile-top`
+: Align the top of this tile with the top of the tallest tile on the same line (the default behaviour)
+
+`.tile-middle`
+: Align the middle of this tile with the middle of the tallest tile on the same line
+
+`.tile-bottom`
+: Align the bottom of this tile with the bottom of the tallest tile on the same line
+
+While for horizontal alignment we add one of the `.tiles-*` variants to the surrounding `.tiles` element:
+
+`.tiles-left`
+: Place tiles on the left side (the default behaviour)
+
+`.tiles-center`
+: Place tiles in the center
+
+`.tiles-right`
+: Place tiles on the right side
+
+`.tiles-justify`
+: Distribute space between tiles so that, when possible, they meet the left and right edge of each line (Thank CrocoDillon for his work on [Justify Grid](http://justifygrid.com/))
+
+### Example: Vertically Align 
+
+~~~html
+<div class="tiles">
+	<div class="tile tile-middle w-1-2">
+		<img
+			src="../examples/images/spiral.svg"
+			alt="swirly whirly"
+			class="w-fill"
+		>
+	</div>
+	<div class="tile tile-middle w-1-2 text-center">
+		TRIPPY<br>
+		JUNK
+	</div>
+</div>
+~~~
+
+<div class="tiles">
+	<div class="tile tile-middle w-1-2">
+		<img src="../examples/images/spiral.svg" alt="swirly whirly" class="w-fill">
+	</div>
+	<div class="tile tile-middle w-1-2 text-center">
+		TRIPPY<br>
+		JUNK
+	</div>
+</div>
+
+### Example: Nav Bar
+
+## Source Ordering
+
+`.shift-*-*-*`
 
 ## Padding
 
@@ -133,20 +303,17 @@ These will look familiar to those of you who use ... The difference here is that
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			consequat.
 		</p>
-	</div
-	><div class="cs-2 tile w-1-2 pad-md">
+	</div>
+	<div class="cs-2 tile w-1-2 pad-md">
 		<h3>Second Column</h3>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 	</div>
 </div>
+
+## Equal Height Columns

@@ -1,6 +1,5 @@
 html {
 	font-family: sans-serif;
-	background-image: url(../images/halftone/halftone.png);
 }
 
 .cs-0 {
@@ -21,3 +20,16 @@ html {
 	color: white;
 }
 
+.textured {
+	position: relative;
+}
+	.textured:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/halftone/halftone-transparent.png);
+		pointer-events: none;
+	}

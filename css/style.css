@@ -68,7 +68,7 @@ h6:first-letter {
 	position: relative;
 }
 
-	.angle-bottom-right:after {
+	.angle-bottom-right:before {
 		content: '';
 		display: block;
 		position: absolute;

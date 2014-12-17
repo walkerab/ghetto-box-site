@@ -1,21 +1,17 @@
 (function() {
 	var elheadings = document.getElementsByTagName('h2');
 	var len = elheadings.length;
-	var elsub_navs_content = [];
+	var elsub_nav_content = [];
 	for (var i = 0; i < len; i++) {
 		var elheading = elheadings[i];
 		elheading.id = elheading.textContent.toLowerCase().replace(/\W/g,'-');
-		elsub_navs_content.push(
-			'<li class="tile md-stack cs-',
+		elsub_nav_content.push([
+			'<li class="tile w-1-3 md-w-fill md-stack cs-',
 				(i%2)+1, // alternate 1 and 2
 				'"><a class="stack pad-h-md lg-pad-h-lg pad-v-sm" href="#',elheading.id,'">',
 				elheading.textContent,
-			'</a></li>');
+			'</a></li>'].join(''));
 	}
-	var elsub_navs = document.getElementsByClassName('js-sub-nav');
-	len = elsub_navs.length;
-	elsub_navs_content = elsub_navs_content.join('');
-	for (var i = 0; i < len; i++) {
-		elsub_navs[i].innerHTML = elsub_navs_content;
-	}
+	var elsub_nav = document.getElementsByClassName('js-sub-nav')[0];
+	elsub_nav.innerHTML = elsub_nav_content.join('\n');
 })();

@@ -116,3 +116,19 @@ dt {
 dd {
 	padding-left: 26px;
 }
+
+@-webkit-keyframes boomboomboom {
+	0% {
+		transform: scaleX(1.005) scaleY(1.005);
+	}
+	100% {
+		transform: scaleX(1.0) scaleY(1.0);
+	}
+}
+
+.boomboomboom-animation {
+	-webkit-animation-name: boomboomboom;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-duration: .6s; /* 60/.6 = 100 BPM */
+	-webkit-animation-iteration-count: infinite;
+}

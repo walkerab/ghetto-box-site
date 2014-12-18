@@ -3,9 +3,43 @@ title: GhettoBox Documentation
 layout: default
 ---
 
-# Documentation
+## Padding
 
-## Screen Sizes
+GhettoBox supports a simple mechanism for maintaining consistent spacing in and around your elements: **padding**.
+
+This isn't exactly a major break-through. If one has worked with CSS, then one has likely worked with padding as well.
+
+The difference here is that other CSS layout systems will apply padding implicitly (without you asking) while GhettoBox applies padding only when you tell it to.
+
+Padding is specified using the `.pad-{size}` and `.pad-{side}-{size}` classes. The sides are "top", "bottom", "left", and "right". By default the sizes are
+
+"nil"
+: zero padding (useful for removing padding at [different screen sizes](#responsive))
+
+"xs"
+: equivalent to `line-height ÷ 4`
+
+"sm"
+: equivalent to `line-height ÷ 2`
+
+"md"
+: equivalent to `line-height`
+
+"lg"
+: equivalent to `line-height x 2`
+
+"xl"
+: equivalent to `line-height x 4`
+
+<div class="cs-2 pad-sm" markdown="1">
+
+The padding sizes are by default based on line-height. This helps maintain a vertical rhythm. Also since line-height is easily visualized, choosing the appropriate padding becomes straightforward.
+
+</div>
+
+By itself, padding isn't very exciting. However, it reallys shines when combined with other components.
+
+## Responsive
 
 Almost all classes in GhettoBox can be selectively applied depending on the screen size.
 
@@ -260,6 +294,8 @@ While for horizontal alignment we add one of the `.tiles-*` variants to the surr
 `.tiles-justify`
 : Distribute space between tiles so that, when possible, they meet the left and right edge of each line (Thank CrocoDillon for his work on [Justify Grid](http://justifygrid.com/))
 
+### Text Alignment
+
 ### Example: Vertically Align 
 
 ~~~html
@@ -293,27 +329,5 @@ While for horizontal alignment we add one of the `.tiles-*` variants to the surr
 ## Source Ordering
 
 `.shift-*-*-*`
-
-## Padding
-
-<div class="tiles">
-	<div class="cs-1 tile w-1-2 pad-md">
-		<h3>First Column</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.
-		</p>
-	</div>
-	<div class="cs-2 tile w-1-2 pad-md">
-		<h3>Second Column</h3>
-		<p>
-			Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</div>
-</div>
 
 ## Equal Height Columns

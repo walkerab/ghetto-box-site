@@ -8,7 +8,7 @@
 		elsub_nav_content.push([
 			'<li class="table-cell w-1-3 md-w-fill md-stack cs-',
 				(i%2)+1, // alternate 1 and 2
-				'"><a class="stack pad-h-md lg-pad-h-lg pad-v-sm" href="#',elheading.id,'">',
+				'"><a class="stack pad-h-md lg-pad-h-lg pad-v-sm hover-arrow" href="#',elheading.id,'">',
 				elheading.textContent,
 			'</a></li>'].join(''));
 	}

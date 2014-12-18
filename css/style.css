@@ -40,6 +40,22 @@ h6:first-letter {
 	color: white;
 }
 
+.hover-arrow {
+	position: relative;
+}
+
+.hover-arrow:focus:after,
+.hover-arrow:hover:after {
+	display: block;
+	position: absolute;
+	content: '<';
+	top: 50%;
+	transform: translate(0,-50%);
+	right: 1em;
+	font-size: 32px;
+	/*background-color: rgba(255,100,255,0.2);*/
+}
+
 .textured {
 	position: relative;
 }

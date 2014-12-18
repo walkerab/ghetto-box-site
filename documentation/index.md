@@ -7,98 +7,68 @@ layout: default
 
 GhettoBox supports a simple mechanism for maintaining consistent spacing in and around your elements: **padding**.
 
-This isn't exactly a major break-through. If one has worked with CSS, then one has likely worked with padding as well.
+This isn't exactly a major breakthrough.
 
-The difference here is that other CSS layout systems will apply padding implicitly (without you asking) while GhettoBox applies padding only when you tell it to.
+The difference here is that other CSS layout systems typically will apply padding without you asking (e.g. for gutters) while GhettoBox applies padding only when you tell it to do so.
 
-Padding is specified using the `.pad-{size}` and `.pad-{side}-{size}` classes. The sides are "top", "bottom", "left", and "right". By default the sizes are
+### Usage
 
-"nil"
-: zero padding (useful for removing padding at [different screen sizes](#responsive))
+Padding is specified using the `.pad-{size}` and `.pad-{side}-{size}` classes.
 
-"xs"
+<div class="sm-table">
+
+<div class="sm-table-cell sm-w-1-3 cs-2 pad-md" markdown="1">
+
+The sides are:
+
+- top
+- bottom
+- left
+- right
+		
+</div>
+
+<div class="sm-table-cell sm-w-2-3 cs-1 pad-md" markdown="1">
+
+The sizes are:
+
+`nil`
+: no padding <small class="fs-sm">(useful for removing padding at [different screen sizes](#responsive))</small>
+
+`xs`
 : equivalent to `line-height ÷ 4`
 
-"sm"
+`sm`
 : equivalent to `line-height ÷ 2`
 
-"md"
+`md`
 : equivalent to `line-height`
 
-"lg"
+`lg`
 : equivalent to `line-height x 2`
 
-"xl"
+`xl`
 : equivalent to `line-height x 4`
+		
+</div>
 
-<div class="cs-2 pad-sm" markdown="1">
+</div>
+
+<div class="cs-2 pad-md" markdown="1">
 
 The padding sizes are by default based on line-height. This helps maintain a vertical rhythm. Also since line-height is easily visualized, choosing the appropriate padding becomes straightforward.
 
 </div>
 
-By itself, padding isn't very exciting. However, it reallys shines when combined with other components.
-
-## Responsive
-
-Almost all classes in GhettoBox can be selectively applied depending on the screen size.
-
-In `variables.styl`:
-
-~~~javascript
-	screen-sizes = {
-		sm: 768px,
-		md: 992px,
-		lg: 1200px,
-		xl: 1400px
-	}
-~~~
-
-We can control when the class is applied by prefixing the name of the screen size onto the class name.
-
-For example, imagine we have two columns.
-
-~~~html
-<div class="tiles">
-	<div class="tile w-1-2 pad-md">
-		1
-	</div>
-	<div class="tile w-1-2 pad-md">
-		2
-	</div>
-</div>
-~~~
-
-Let's say we only wanted them to act as columns (tiles) when the screen is of at least a medium size (`992px`).
-
-~~~html
-<div class="tiles">
-	<div class="md-tile md-w-1-2 pad-md">
-		1
-	</div>
-	<div class="md-tile md-w-1-2 pad-md">
-		2
-	</div>
-</div>
-~~~
-
-Note that these selective class-names are applied in a mobile-first fashion. This means that a class will apply to the specified screen size *as well as* all larger screen-sizes.
-
-You can override a component provided
-
-`.tile`,`.stack`,`.table`
-
-`.pad-*`
-
-## Naming Scheme
+By itself, padding isn't terribly exciting. However, it really shines when combined with other components.
 
 ## Tiling
 
 The core feature of GhettoBox is the tiling system. It is what controls left-to-right layout.
 
-<div class="cs-2 pad-sm" markdown="1">
+<div class="cs-1 pad-md" markdown="1">
 
-In the context of GhettoBox, an element that flows left-to-right and wraps around is referred to as a tile.
+In the context of GhettoBox, an element that flows left-to-right and wraps around is referred to as a **tile**.
 	
 </div>
 
@@ -269,7 +239,7 @@ Unlike other grid systems, these "columns" do not include gutters by default. If
 
 Tiles can be aligned both vertically and/or horizontally.
 
-For vertical alignment we add one of these `.tile-*` variants to our tile elements:
+For **vertical alignment** we add one of these `.tile-*` variants to our tile elements:
 
 `.tile-top`
 : Align the top of this tile with the top of the tallest tile on the same line (the default behaviour)
@@ -280,7 +250,7 @@ For vertical alignment we add one of these `.tile-*` variants to our tile elemen
 `.tile-bottom`
 : Align the bottom of this tile with the bottom of the tallest tile on the same line
 
-While for horizontal alignment we add one of the `.tiles-*` variants to the surrounding `.tiles` element:
+While for **horizontal alignment** we add one of the `.tiles-*` variants to the surrounding `.tiles` element:
 
 `.tiles-left`
 : Place tiles on the left side (the default behaviour)
@@ -331,3 +301,57 @@ While for horizontal alignment we add one of the `.tiles-*` variants to the surr
 `.shift-*-*-*`
 
 ## Equal Height Columns
+
+
+## Responsive
+
+Almost all classes in GhettoBox can be selectively applied depending on the screen size.
+
+In `variables.styl`:
+
+~~~javascript
+	screen-sizes = {
+		sm: 768px,
+		md: 992px,
+		lg: 1200px,
+		xl: 1400px
+	}
+~~~
+
+We can control when the class is applied by prefixing the name of the screen size onto the class name.
+
+For example, imagine we have two columns.
+
+~~~html
+<div class="tiles">
+	<div class="tile w-1-2 pad-md">
+		1
+	</div>
+	<div class="tile w-1-2 pad-md">
+		2
+	</div>
+</div>
+~~~
+
+Let's say we only wanted them to act as columns (tiles) when the screen is of at least a medium size (`992px`).
+
+~~~html
+<div class="tiles">
+	<div class="md-tile md-w-1-2 pad-md">
+		1
+	</div>
+	<div class="md-tile md-w-1-2 pad-md">
+		2
+	</div>
+</div>
+~~~
+
+Note that these selective class-names are applied in a mobile-first fashion. This means that a class will apply to the specified screen size *as well as* all larger screen-sizes.
+
+You can override a component provided
+
+`.tile`,`.stack`,`.table`
+
+`.pad-*`
+
+## Naming Scheme

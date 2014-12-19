@@ -6,7 +6,7 @@
 		var elheading = elheadings[i];
 		elheading.id = elheading.textContent.toLowerCase().replace(/\W/g,'-');
 		elsub_nav_content.push([
-			'<li class="table-cell w-1-3 md-w-fill md-stack cs-',
+			'<li class="table-cell table-cell-middle w-1-3 md-w-fill md-stack cs-',
 				(i%2)+1, // alternate 1 and 2
 				'"><a class="stack pad-h-md lg-pad-h-lg pad-v-sm fs-sm sm-fs-md hover-arrow" href="#',elheading.id,'">',
 				elheading.textContent,

@@ -21,7 +21,8 @@
 	};
 
 	var highlightDifferences = function(html) {
-		var lines = html.split('\n');
+		// First line is empty so we slice it off.
+		var lines = html.split('\n').slice(1);
 		var result = [];
 		var regex_matcher = /<span class="token comment" spellcheck="true">&lt;!-- \/(.*)\/ --><\/span>$/;
 		lines.forEach(function(line) {
@@ -33,6 +34,10 @@
 			} else {
 				result.push(line);
 			}
+		});
+		result = result.map(function(line) {
+			// Remove some indentation.
+			return line.substr(1);
 		});
 		return result.join('\n');
 	};

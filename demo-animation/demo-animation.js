@@ -21,15 +21,16 @@
 	};
 
 	var highlightDifferences = function(html) {
-		var lines = escapeHTML(html).split('\n');
+		var lines = html.split('\n');
 		var result = [];
-		var regex_matcher = /&lt;!--\s*\/(.*)\/\s*--&gt;/;
+		var regex_matcher = /<span class="token comment" spellcheck="true">&lt;!-- \/(.*)\/ --><\/span>$/;
 		lines.forEach(function(line) {
-			if (line.substr(-5) === '-&gt;') {
-				var match = regex_matcher.exec(line);
+			var match = regex_matcher.exec(line);
+			if (match !== null) {
 				var regex_str = match[1];
 				var regex = new RegExp(regex_str);
 				result.push(line.substr(0,line.length-match[0].length).replace(regex,highlightString));
+				console.log(regex);
 			} else {
 				result.push(line);
 			}
@@ -42,7 +43,11 @@
 	}
 
 	var showFrame = function(frame) {
-		var highlighted_text = highlightDifferences(frame.innerHTML);
+		// var highlighted_text = highlightDifferences(frame.innerHTML);
+		var highlighted_text = highlightDifferences(Prism.highlight(
+			frame.innerHTML,
+			Prism.languages.markup
+		));
 		el_source.innerHTML = highlighted_text;
 		el_result.innerHTML = frame.innerHTML;
 	};

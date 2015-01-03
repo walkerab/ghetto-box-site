@@ -42,10 +42,6 @@
 		return result.join('\n');
 	};
 
-	function escapeHTML(html) {
-		return html.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-	}
-
 	var context = {
 		logo_src: '../examples/images/logo.svg',
 		links: [

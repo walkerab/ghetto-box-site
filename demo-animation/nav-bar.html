@@ -10,15 +10,11 @@
 		<div class="my-nav-bar">
 			<img src="../examples/images/logo.svg" alt="logo">
 			<ul>
+				{{#each links}}
 				<li>
-					<a href="#">Home</a>
+					<a href="{{href}}">{{title}}</a>
 				</li>
-				<li>
-					<a href="#">Examples</a>
-				</li>
-				<li>
-					<a href="#">Whatever</a>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
@@ -26,15 +22,11 @@
 		<div class="my-nav-bar">
 			<img src="../examples/images/logo.svg" alt="logo">
 			<ul class="tiles"><!-- /tiles/ -->
+				{{#each links}}
 				<li class="tile"><!-- /tile/ -->
-					<a href="#">Home</a>
+					<a href="{{href}}">{{title}}</a>
 				</li>
-				<li class="tile"><!-- /tile/ -->
-					<a href="#">Examples</a>
-				</li>
-				<li class="tile"><!-- /tile/ -->
-					<a href="#">Whatever</a>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
@@ -42,15 +34,11 @@
 		<div class="my-nav-bar tiles"><!-- /tiles/ -->
 			<img class="tile" src="../examples/images/logo.svg" alt="logo"><!-- /tile/ -->
 			<ul class="tile tiles"><!-- /tile/ -->
+				{{#each links}}
 				<li class="tile">
-					<a href="#">Home</a>
+					<a href="{{href}}">{{title}}</a>
 				</li>
-				<li class="tile">
-					<a href="#">Examples</a>
-				</li>
-				<li class="tile">
-					<a href="#">Whatever</a>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
@@ -58,15 +46,11 @@
 		<div class="my-nav-bar tiles">
 			<img class="tile" src="../examples/images/logo.svg" alt="logo">
 			<ul class="tile tiles">
+				{{#each links}}
 				<li class="tile pad-h-xs"><!-- /pad-h-xs/ -->
-					<a href="#">Home</a>
+					<a href="{{href}}">{{title}}</a>
 				</li>
-				<li class="tile pad-h-xs"><!-- /pad-h-xs/ -->
-					<a href="#">Examples</a>
-				</li>
-				<li class="tile pad-h-xs"><!-- /pad-h-xs/ -->
-					<a href="#">Whatever</a>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
@@ -74,15 +58,11 @@
 		<div class="my-nav-bar tiles tiles-justify"><!-- /tiles-justify/ -->
 			<img class="tile" src="../examples/images/logo.svg" alt="logo">
 			<ul class="tile tiles">
+				{{#each links}}
 				<li class="tile pad-h-xs">
-					<a href="#">Home</a>
+					<a href="{{href}}">{{title}}</a>
 				</li>
-				<li class="tile pad-h-xs">
-					<a href="#">Examples</a>
-				</li>
-				<li class="tile pad-h-xs">
-					<a href="#">Whatever</a>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
@@ -90,15 +70,11 @@
 		<div class="my-nav-bar tiles tiles-justify">
 			<img class="tile" src="../examples/images/logo.svg" alt="logo">
 			<ul class="tile tile-bottom tiles"><!-- /tile-bottom/ -->
+				{{#each links}}
 				<li class="tile pad-h-xs">
-					<a href="#">Home</a>
+					<a href="{{href}}">{{title}}</a>
 				</li>
-				<li class="tile pad-h-xs">
-					<a href="#">Examples</a>
-				</li>
-				<li class="tile pad-h-xs">
-					<a href="#">Whatever</a>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>

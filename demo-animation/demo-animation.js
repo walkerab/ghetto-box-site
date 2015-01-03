@@ -30,7 +30,6 @@
 				var regex_str = match[1];
 				var regex = new RegExp(regex_str);
 				result.push(line.substr(0,line.length-match[0].length).replace(regex,highlightString));
-				console.log(regex);
 			} else {
 				result.push(line);
 			}
@@ -42,6 +41,23 @@
 		return html.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 	}
 
+	var context = {
+		links: [
+			{
+				title: 'Home',
+				href: '#'
+			},
+			{
+				title: 'Examples',
+				href: '#'
+			},
+			{
+				title: 'Whatever',
+				href: '#'
+			}
+		]
+	};
+
 	var showFrame = function(frame) {
 		// var highlighted_text = highlightDifferences(frame.innerHTML);
 		var highlighted_text = highlightDifferences(Prism.highlight(
@@ -49,7 +65,8 @@
 			Prism.languages.markup
 		));
 		el_source.innerHTML = highlighted_text;
-		el_result.innerHTML = frame.innerHTML;
+		var template = Handlebars.compile(frame.innerHTML)
+		el_result.innerHTML = template(context);
 	};
 
 	var hideFrame = function(frame) {

@@ -47,6 +47,7 @@
 	}
 
 	var context = {
+		logo_src: '../examples/images/logo.svg',
 		links: [
 			{
 				title: 'Home',

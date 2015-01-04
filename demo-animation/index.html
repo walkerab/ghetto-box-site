@@ -210,11 +210,28 @@
 			bottom: 0;
 			right: 0;
 		}
+
+		.animation-control {
+			cursor: pointer;
+		}
+
+		.animation-control:hover {
+			outline: 1px solid rgb(100,255,100);
+		}
+
+		.animation-control-active {
+			outline: 1px solid rgb(0,100,0);
+		}
+
+		body {
+			background-color: white;
+		}
 	</style>
 </head>
 <body class="tiles">
 	<div style="height: 182px;" id="result"></div>
 	<pre id="source" class="language-markup"></pre>
+	<div id="animation-controls" class="tiles tiles-center"></div>
 	<script type="text/javascript" src="../bower_components/prism/prism.js" data-manual></script>
 	<script src="../bower_components/handlebars/handlebars.min.js"></script>
 	<script type="text/javascript" src="demo-animation.js"></script>

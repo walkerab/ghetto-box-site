@@ -67,8 +67,8 @@
 			Prism.languages.markup
 		));
 		el_source.innerHTML = highlighted_text;
-		var template = Handlebars.compile(frame.innerHTML)
-		el_result.innerHTML = template(context);
+		var template = Handlebars.compile(frame.innerHTML);
+		el_result.innerHTML = template(context)+'<div class="commentary">'+frame.getAttribute('data-title')+'</div>';
 	};
 
 	var hideFrame = function(frame) {

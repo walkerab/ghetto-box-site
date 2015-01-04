@@ -137,3 +137,15 @@ dd {
 	-webkit-animation-duration: .6s; /* 60/.6 = 100 BPM */
 	-webkit-animation-iteration-count: infinite;
 }
+
+.fixed-nav-wrapper {
+	padding-top: 52px;
+}
+
+.fixed-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}

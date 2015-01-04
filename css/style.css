@@ -149,3 +149,9 @@ dd {
 	width: 100%;
 	z-index: 1;
 }
+
+.js-sticky-sidebar {
+	position: fixed;
+	top: 52px;
+	left: 0;
+}

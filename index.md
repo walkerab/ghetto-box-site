@@ -9,7 +9,7 @@ GhettoBox is a set of CSS micro-components for doing page layout (and that's it)
 
 At a basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it provides a lot more than that.
 
-<iframe style="height: 800px;" class="w-fill" src="demo-animation/" frameborder="0"></iframe>
+<iframe style="height: 520px;" class="w-fill" src="demo-animation/" frameborder="0"></iframe>
 
 GhettoBox is made to fit into your template layer. It's designed for rapidly creating page layouts and encourages creating [Mockups in Markup](#).
 

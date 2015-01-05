@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "prism": "gh-pages",
-    "handlebars": "~2.0.0"
+    "handlebars": "~2.0.0",
+    "bootstrap": "~3.3.1"
   }
 }

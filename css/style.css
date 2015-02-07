@@ -190,3 +190,11 @@ h2:target {
 		transform: translate(0, 0);
 	}
 }
+
+.download-button {
+	border-radius: 2px;
+	padding: 5px 20px;
+	border: 10px solid #ffcb41;
+	background-color: orange;
+	font-size: 24px;
+}

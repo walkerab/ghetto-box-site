@@ -61,7 +61,7 @@ The fact is GhettoBox is a really good CSS tool. Extensive research and practice
 
 ### Examples
 
-Do have something you've created using GhettoBox? We'd love to see it! Maybe it can be added to the examples page.
+Do you have something you've created using GhettoBox? We'd love to see it! Maybe it can be added to the examples page.
 
 ## Misc
 

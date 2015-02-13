@@ -5,48 +5,47 @@ layout: default
 
 ## What is it?
 
-GhettoBox is a set of CSS micro-components for doing page layout (and that's it).
+GhettoBox is a set of CSS micro-components for doing page layout. That's it.
 
-At a basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it provides a lot more than that.
+At the most basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it can provide much more than that.
+
+It looks like this:
 
 <iframe style="height: 520px;" class="w-fill" src="demo-animation/" frameborder="0"></iframe>
 
-GhettoBox is made to fit into your template layer. It's designed for rapidly creating page layouts and encourages creating [Mockups in Markup](#).
+GhettoBox is designed to fit into your template layer. It's made for rapid page layout and prototyping and works nicely with [creating Mockups in Markup](http://24ways.org/2009/make-your-mockup-in-markup/).
 
 <div class="cs-2 pad-sm rnd-xs" markdown="1">
 
-*Note:* GhettoBox is not meant to be a replacement for your favorite framework. It should complement your toolset while staying out of the way as much as possible.
+*Note:* GhettoBox is not meant to be a replacement for your favorite framework. It should complement your existing tool-set while staying out of the way as much as possible.
 
 </div>
 
-## You Crazy
+GhettoBox is *only for layout*. That means if you use it, you will still need to create your own HTML/CSS components and styles. GhettoBox will be there to help you size, position, and resize your components.
 
-GhettoBox is very different from other CSS libraries. It isn't going to meld with everyone's idea of what qualifies as "proper CSS".
+### Make Layout Easy
 
-I fully expect some people to hate on it. Haters gonna hate.
+More than anything, GhettoBox strives to **make layout easy**.
 
-Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be applied to HTML.
+Let's face it, working with CSS can be a [finnicky, fidgety, frustrating, mess](images/PPML.gif). For any given task, there are a hundred different ways to go about it depending on context, preference, and browser support. They all break in there own special way.
 
-## Motivation
+We believe there is a better way. The theory being that by using **less** features of CSS, you can actually get **more** done with it.
 
-One of the hardest parts of web development is getting elements to appear where and how you want them. CSS can be frustrating tool to work with - especially for beginners. It often acts in ways that are unintuitive or difficult to work around.
+GhettoBox takes the multitude of CSS layout options and narrows them down to a handful of primitives:
 
-While flexbox and web components may be the future of HTML/CSS, for now, we designers and developers are stuck working under some serious limitations.
+- [Padding](documentation/#padding)
+- [Left-to-Right Placement](documentation/#tiling)
+- [Widths](documentation/#widths)
+- [Horizontal/Vertical Alignment](documentation/#alignment)
 
-...
+You may think that this would be limiting - that it would not be enough to create elegant or complex page structures, but the truth is, if used properly, the above will get you over 90% of the way there (if not all of the way).
 
-More than anything, GhettoBox aims to **make layout easy**. It takes the majority of layout and narrows it down to some very basic core components:
-
-- Padding
-- Left-to-Right Placement
-- Widths
-- Horizontal/Vertical Alignment
-
-In addition, it provides utilities for:
+As an added bonus, GhettoBox throws in functionality for:
 
 - Font Sizing
-- Equal Height Columns
-- Responsiveness
+- [Equal Height Columns](documentation/#equal-height-columns)
+- [Responsiveness](documentation/#responsive)
+- [Source Ordering](documentation/#source-ordering)
 
 ### Goals
 
@@ -54,9 +53,10 @@ The project goals:
 
 - **Make HTML/CSS layout easy!**
 	- Don't fight the document flow
+	- Keep it simple, stupid!
 - Beginner friendly
 	- Do not require the use of a preprocessor
-	- Stick to simple, easy-to-follow components
+	- Stick to primitive, easy-to-follow components
 - Only handle what's directly related to layout
 	- No widgets, dropdowns, popups, etc
 	- No scripting or behaviour
@@ -66,6 +66,22 @@ The project goals:
 - Stay out of the way as much as possible
 	- Classes adhere to a specificity level of one
 	- Limit global styling
+
+## You Crazy
+
+GhettoBox is different from other CSS libraries. It may not meld with your idea of what qualifies as "proper CSS".
+
+We fully expect some people to hate on it. Haters gonna hate.
+
+Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be applied to HTML.
+
+<!-- 
+## Motivation
+
+One of the hardest parts of web development is getting elements to appear where and how you want them. CSS can be frustrating tool to work with - especially for beginners. It often acts in ways that are unintuitive or difficult to work around.
+
+While flexbox and web components may be the future of HTML/CSS, for now, we designers and developers are stuck working within the limitations of browsers. GhettoBox is an easy-to-learn system that ...
+ -->
 
 ## What's different?
 

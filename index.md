@@ -5,9 +5,11 @@ layout: default
 
 ## What is it?
 
-GhettoBox is a set of CSS micro-components for doing page layout. That's it.
+GhettoBox is a set of CSS micro-components for doing page layout. That's it. 
 
-At the most basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it can provide much more than that.
+Place the provided CSS class names in your markup to control width, height, padding, alignment, etc.
+
+At the most basic level, it is akin to a CSS grid system. However, once you get to know it, you will see it provides much more than that.
 
 It looks like this:
 
@@ -21,7 +23,9 @@ GhettoBox is designed to fit into your template layer. It's made for rapid page 
 
 </div>
 
-GhettoBox is *only for layout*. That means if you use it, you will still need to create your own HTML/CSS components and styles. GhettoBox will be there to help you size, position, and resize your components.
+GhettoBox is *exclusively for layout*. That means you will still need to create your own HTML/CSS components and styles.
+
+You create the stylized components (e.g. buttons, sidebars, widgets, and pull-quotes) - GhettoBox will be there to help you size and position them.
 
 ### Make Layout Easy
 
@@ -52,11 +56,8 @@ As an added bonus, GhettoBox throws in functionality for:
 The project goals:
 
 - **Make HTML/CSS layout easy!**
-	- Don't fight the document flow
-	- Keep it simple, stupid!
-- Beginner friendly
-	- Do not require the use of a preprocessor
-	- Stick to primitive, easy-to-follow components
+	- Work with the document flow instead of fighting it
+	- Sketching a layout should be as simple as drawing on graph paper
 - Only handle what's directly related to layout
 	- No widgets, dropdowns, popups, etc
 	- No scripting or behaviour
@@ -69,19 +70,9 @@ The project goals:
 
 ## You Crazy
 
-GhettoBox is different from other CSS libraries. It may not meld with your idea of what qualifies as "proper CSS".
-
-We fully expect some people to hate on it. Haters gonna hate.
+THe GhettoBox philosophy is to control layout from markup. This may not meld with your idea of what qualifies as "proper CSS". We fully expect some people to hate on it. **Haters gonna hate**.
 
 Give it a chance though - [just five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes). Even if you don't end up using it for anything, GhettoBox involves thinking about page layout in a different way. At the very least, it will provide you with a fresh perspective on how CSS can be applied to HTML.
-
-<!-- 
-## Motivation
-
-One of the hardest parts of web development is getting elements to appear where and how you want them. CSS can be frustrating tool to work with - especially for beginners. It often acts in ways that are unintuitive or difficult to work around.
-
-While flexbox and web components may be the future of HTML/CSS, for now, we designers and developers are stuck working within the limitations of browsers. GhettoBox is an easy-to-learn system that ...
- -->
 
 ## What's different?
 
@@ -99,7 +90,7 @@ GhettoBox isn't perfect either, but it does address the above. It is designed sp
 
 If you have worked with a CSS preprocessor before, it may help to think about GhettoBox's components like mix-ins - the difference being that you apply the mix-ins directly to HTML elements as opposed to being applied to CSS rules which are then used on HTML elements.
 
-So why not just use mix-ins instead of mucking up our HTML? Here's the short answer:
+So why not just use mix-ins instead of mucking up our HTML? Here's the short answer: markup and layout are tightly connected. Ideally we should be configuring them from the same place. It doesn't make sense to handle nesting and ordering elements in HTML and then deal with alignment and sizing in a separate CSS file. The ideas are fundamentally interconnected.
 
 DOM Layout is inherently contextual. Changing the size/position of one element will affect the size/position of its sibling or parent elements. What's nice about using class names as makeshift mix-ins (as opposed to preprocessor mix-ins) is that we don't lose sight of the context we are working in. We are in the HTML and we can, at a glance, see how the changing of one element will interact with its surroundings.
 
